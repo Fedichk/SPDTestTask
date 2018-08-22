@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/SPDTestTask.iml" filepath="$PROJECT_DIR$/.idea/modules/SPDTestTask.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SPDTestTask_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SPDTestTask_main.iml" group="SPDTestTask" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SPDTestTask_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SPDTestTask_test.iml" group="SPDTestTask" />
     </modules>
   </component>
 </project>
