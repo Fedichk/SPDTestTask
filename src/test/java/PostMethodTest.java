@@ -17,7 +17,7 @@ public class PostMethodTest {
     private AsyncHttpClient asyncHttpClient = Dsl.asyncHttpClient();
 
     @Test
-    @Tag("syntax test")
+    @Tag("syntax")
     @DisplayName("should work when required parameter 'expr' is present")
     void testCorrectExpression() throws Exception {
 
@@ -33,7 +33,7 @@ public class PostMethodTest {
     }
 
     @Test
-    @Tag("syntax test")
+    @Tag("syntax")
     @DisplayName("shouldn't work when required parameter 'expr' is absent")
     void testWrongExpression() throws Exception {
 
@@ -46,7 +46,7 @@ public class PostMethodTest {
     }
 
     @Test
-    @Tag("functionality test")
+    @Tag("functionality")
     @DisplayName("should make different basic mathematics operations")
     void testBasicFunctionality() throws Exception {
 
@@ -56,7 +56,7 @@ public class PostMethodTest {
         tasksNode.add("7+5");
         tasksNode.add("18-7");
         tasksNode.add("8*8");
-        tasksNode.add("v72/9");
+        tasksNode.add("72/9");
         tasksNode.add("65/6");
         requestNode.putPOJO("expr", tasksNode);
         requestNode.put("precision", 4);

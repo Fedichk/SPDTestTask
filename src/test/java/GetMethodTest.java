@@ -12,7 +12,7 @@ public class GetMethodTest {
     private AsyncHttpClient asyncHttpClient = Dsl.asyncHttpClient();
 
     @Test
-    @Tag("syntax test")
+    @Tag("syntax")
     @DisplayName("should work when required parameter 'expr' is present")
     void testCorrectExpression() throws Exception {
 
@@ -21,7 +21,7 @@ public class GetMethodTest {
     }
 
     @Test
-    @Tag("syntax test")
+    @Tag("syntax")
     @DisplayName("shouldn't work when required parameter 'expr' is absent")
     void testWrongExpression() throws Exception {
 
@@ -30,7 +30,7 @@ public class GetMethodTest {
     }
 
     @Test
-    @Tag("functionality test")
+    @Tag("functionality")
     @DisplayName("should sum two numbers")
     void testAddition() throws Exception {
 
@@ -39,7 +39,7 @@ public class GetMethodTest {
     }
 
     @Test
-    @Tag("functionality test")
+    @Tag("functionality")
     @DisplayName("should subtract two numbers")
     void testSubtraction() throws Exception {
 
@@ -48,7 +48,7 @@ public class GetMethodTest {
     }
 
     @Test
-    @Tag("functionality test")
+    @Tag("functionality")
     @DisplayName("should multiplication two numbers")
     void testMultiplication() throws Exception {
 
@@ -57,7 +57,7 @@ public class GetMethodTest {
     }
 
     @Test
-    @Tag("functionality test")
+    @Tag("functionality")
     @DisplayName("should divide two numbers")
     void testDivision() throws Exception {
 
@@ -66,7 +66,7 @@ public class GetMethodTest {
     }
 
     @Test
-    @Tag("functionality test")
+    @Tag("functionality")
     @DisplayName("should divide and precision two numbers")
     void testPrecision() throws Exception {
 
