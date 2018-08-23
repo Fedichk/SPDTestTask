@@ -9,6 +9,18 @@ repositories {
     mavenCentral()
 }
 
+jar {
+    from {
+        (configurations.testRuntime).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    from sourceSets.test.output
+    manifest {
+        attributes("Main-Class": "TestsRunClass" )
+    }
+}
+
 dependencies {
 
     compile group: 'org.asynchttpclient', name: 'async-http-client', version: '2.5.2'
