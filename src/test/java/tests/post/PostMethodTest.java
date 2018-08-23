@@ -1,4 +1,4 @@
-package tests;
+package tests.post;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -10,11 +10,12 @@ import org.asynchttpclient.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.TestParent;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PostMethodTest {
+public class PostMethodTest implements TestParent {
 
     private AsyncHttpClient asyncHttpClient = Dsl.asyncHttpClient();
 

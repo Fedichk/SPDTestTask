@@ -1,4 +1,4 @@
-package tests;
+package tests.get;
 
 import org.asynchttpclient.AsyncHttpClient;
 import org.asynchttpclient.Dsl;
@@ -8,10 +8,11 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import tests.TestParent;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class GetMethodTest {
+public class GetMethodTest implements TestParent {
 
     private AsyncHttpClient asyncHttpClient = Dsl.asyncHttpClient();
 

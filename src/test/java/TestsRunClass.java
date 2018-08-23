@@ -5,6 +5,7 @@ import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
 import org.junit.platform.launcher.core.LauncherFactory;
 import org.junit.platform.launcher.listeners.SummaryGeneratingListener;
 import org.junit.platform.launcher.listeners.TestExecutionSummary;
+import tests.TestParent;
 
 import java.util.List;
 
@@ -20,7 +21,7 @@ public class TestsRunClass {
 
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                 .selectors(
-                        selectPackage("tests"))
+                        selectPackage(String.valueOf(TestParent.class.getPackage().getName())))
                 .filters(
                         TagFilter.includeTags(filters)
                 )
