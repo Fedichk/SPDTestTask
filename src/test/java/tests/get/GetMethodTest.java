@@ -14,8 +14,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GetMethodTest implements TestParent {
 
-    private AsyncHttpClient asyncHttpClient = Dsl.asyncHttpClient();
-
     @Test
     @Tag("syntax")
     @DisplayName("should work when required parameter 'expr' is present")
