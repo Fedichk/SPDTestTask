@@ -21,7 +21,7 @@ public class TestsRunClass {
 
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                 .selectors(
-                        selectPackage(String.valueOf(TestParent.class.getPackage().getName())))
+                        selectPackage(TestParent.class.getPackage().getName()))
                 .filters(
                         TagFilter.includeTags(filters)
                 )
