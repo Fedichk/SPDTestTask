@@ -35,8 +35,8 @@ public class TestsRunClass {
         TestExecutionSummary summary = listener.getSummary();
         long testFoundCount = summary.getTestsFoundCount();
         List<TestExecutionSummary.Failure> failures = summary.getFailures();
-        System.out.println("getTestsSucceededCount() - " + summary.getTestsSucceededCount());
-        failures.forEach(failure -> System.out.println("failure - " + failure.getException()));
         System.out.println("Founding tests: " + testFoundCount);
+        System.out.println("Succeeded tests: " + summary.getTestsSucceededCount());
+        failures.forEach(failure -> System.out.println("failure - " + failure.getException()));
     }
 }
