@@ -4,6 +4,8 @@ import org.asynchttpclient.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -72,5 +74,15 @@ public class GetMethodTest {
 
         Response response = asyncHttpClient.prepareGet("\thttp://api.mathjs.org/v4/?expr=100%2F6&precision=4").execute().get();
         assertEquals(response.getResponseBody(), "16.67");
+    }
+
+    @ParameterizedTest
+    @CsvSource({"http://api.mathjs.org/v4/?expr=9%2B15, 24", "http://api.mathjs.org/v4/?expr=8%2F2, 4", "http://api.mathjs.org/v4/?expr=7*7, 49"})
+    @Tag("functionality")
+    @DisplayName("should should make few mathematics operations")
+    void testPrecision(String request, String result) throws Exception {
+
+        Response response = asyncHttpClient.prepareGet(request).execute().get();
+        assertEquals(response.getResponseBody(), result);
     }
 }
