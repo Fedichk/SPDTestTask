@@ -8,7 +8,7 @@ import org.junit.platform.launcher.listeners.TestExecutionSummary;
 
 import java.util.List;
 
-import static org.junit.platform.engine.discovery.DiscoverySelectors.selectClass;
+import static org.junit.platform.engine.discovery.DiscoverySelectors.*;
 
 public class TestsRunClass {
 
@@ -20,8 +20,7 @@ public class TestsRunClass {
 
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request()
                 .selectors(
-                        selectClass("GetMethodTest"),
-                        selectClass("PostMethodTest"))
+                        selectPackage("tests"))
                 .filters(
                         TagFilter.includeTags(filters)
                 )

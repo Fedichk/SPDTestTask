@@ -1,3 +1,5 @@
+package tests;
+
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -72,4 +74,6 @@ public class PostMethodTest {
         String errorStatus = responseNode.get("error").textValue();
         assertEquals(errorStatus, null);
     }
+
+
 }
