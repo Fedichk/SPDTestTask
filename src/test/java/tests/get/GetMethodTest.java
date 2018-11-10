@@ -1,7 +1,5 @@
 package tests.get;
 
-import org.asynchttpclient.AsyncHttpClient;
-import org.asynchttpclient.Dsl;
 import org.asynchttpclient.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;

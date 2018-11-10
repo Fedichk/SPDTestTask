@@ -4,8 +4,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.asynchttpclient.AsyncHttpClient;
-import org.asynchttpclient.Dsl;
 import org.asynchttpclient.Response;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -73,6 +71,4 @@ public class PostMethodTest implements TestParent {
         String errorStatus = responseNode.get("error").textValue();
         assertEquals(errorStatus, null);
     }
-
-
 }
