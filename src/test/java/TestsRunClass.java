@@ -7,13 +7,14 @@ import org.junit.platform.launcher.listeners.SummaryGeneratingListener;
 import org.junit.platform.launcher.listeners.TestExecutionSummary;
 import tests.TestParent;
 
+import java.io.IOException;
 import java.util.List;
 
 import static org.junit.platform.engine.discovery.DiscoverySelectors.*;
 
 public class TestsRunClass {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         String[] filters = {"syntax", "functionality"};
         if (args.length > 0) {
             filters = args;
@@ -38,5 +39,6 @@ public class TestsRunClass {
         System.out.println("Founding tests: " + testFoundCount);
         System.out.println("Succeeded tests: " + summary.getTestsSucceededCount());
         failures.forEach(failure -> System.out.println("failure - " + failure.getException()));
+        TestParent.asyncHttpClient.close();
     }
 }

@@ -53,7 +53,7 @@ public class GetMethodTest implements TestParent {
     @DisplayName("should multiplication two numbers")
     void testMultiplication() throws Exception {
 
-        Response response = asyncHttpClient.prepareGet("\thttp://api.mathjs.org/v4/?expr=5*5").execute().get();
+        Response response = asyncHttpClient.prepareGet("http://api.mathjs.org/v4/?expr=5*5").execute().get();
         assertEquals(response.getResponseBody(), "25");
     }
 
@@ -71,7 +71,7 @@ public class GetMethodTest implements TestParent {
     @DisplayName("should divide and precision two numbers")
     void testPrecision() throws Exception {
 
-        Response response = asyncHttpClient.prepareGet("\thttp://api.mathjs.org/v4/?expr=100%2F6&precision=4").execute().get();
+        Response response = asyncHttpClient.prepareGet("http://api.mathjs.org/v4/?expr=100%2F6&precision=4").execute().get();
         assertEquals(response.getResponseBody(), "16.67");
     }
 
